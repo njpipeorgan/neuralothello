@@ -1,0 +1,17 @@
+$gamesperbatch=2500;
+$symmetryfactor=8.0;
+$netdependencylength=8;
+$samplingratio=10.0;
+$batchsize=4000;
+$maxroundsfactor=$symmetryfactor/$batchsize/$netdependencylength*$samplingratio;
+$minround=7;
+
+--playouts 800
+--opening-temp 1.0
+--midgame-temp 0.7
+--endgame-temp 0.5->0.3
+--policy-temp 1.2
+
+"ValueLoss"->Scaled[4.0]
+"LearningRate"->0.02
+"L2Regularization"->0.0001
